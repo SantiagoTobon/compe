@@ -1,0 +1,89 @@
+<%= form_for(@participante) do |f| %>
+  <% if @participante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@participante.errors.count, "error") %> prohibited this participante from being saved:</h2>
+
+      <ul>
+      <% @participante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+   <img class="slide-i" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/22590_10205819436197529_3266209836136536540_n.jpg?oh=678849a935e935a18c15b9e386d649a2&oe=560CCC4C&__gda__=1440855813_fc0b41a3c17d4c40287302eb649a4f6c" alt="">
+   
+
+    <div class="col-xs-6 col-md-4">  
+       <p>
+    <p>
+    <p> 
+    <p><h2>Formulario de Inscripción</h2>
+    <p>
+    <p>
+    <p>
+      
+        <div class="field">
+          <%= f.text_field :cc,  :value => "Número de Documento" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :primer_Nombre, :value => "Primer Nombre" %> 
+        </div>
+        <div class="field">
+          <%= f.text_field :segundo_Nombre,  :value => "Segundo Nombre" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :primer_Apellido,  :value => "Primer Apellido" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :segundo_Apellido,  :value => "Segundo Apellido" %>
+        </div>
+        <div class ="field">
+          <%= f.text_field :eps, :value => "EPS" %>
+        </div>
+        <div class="field">
+           <%= f.text_field :ciudad, :value => "Ciudad" %>
+        </div>
+        <div class="field">
+          <%= f.text_field :telefono, :value =>"Telefono" %>
+        </div>
+        <div class="field">
+          <% nombres = { 'Masculino Novatos' => 'Masculino Novatos', 'Masculino libre' => 'Masculino libre', 'Femenino Novatas' => 'Femenino Novatas', 'Femenino Libres' => 'Femenino Libres'} %>
+          <fieldset>
+            <% lista= nombres.sort %>
+            <%= f.select :categoria, lista %>
+          </fieldset>
+        </div>
+        <div class="field">
+          <%= f.text_field :edad, :value => "Edad" %>
+        </div>  
+          <p align="justify"><ins>Recuerda que al presionar el boton estas aceptando los terminos y condiciones de nuestro evento</ins>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+        
+      </div>
+      <div class= "col-xs-6 col-md-8" >
+      <h2> <ins>Terminos y Condiciones</ins></h1>
+        <p>      
+
+          Los participantes del torneo deberán portar los siguientes documentos:<p>
+          
+          Documento de Identificación<p align="justify">
+          Seguro Médico<p align="justify">
+          En caso de ser menor de edad, el deportista tendrá que traer una carta de autorización firmada por sus padres, en           caso de no estar presentes: su acudiente responsable. <p align="justify">        
+          
+          
+          
+          Los organizadores del evento no se hacen responsables de ningun tipo de acciedente. Al ser un deporte de alto           riesgo, es responsabilidad es del  deportista sabiendo los riesgos que la escalada conlleva. Las rutas estaran                    protegidas con Crash Pads,  el comité organizador no se hace responsable por el uso indebido del material de          seguridad; sin enmbargo se proporcionaran  únicamente las siguientes medidas de seguridad en caso de un accidente:<p align="justify">
+          Servicio de Primeros Auxilios.
+          Transporte hasta el centro de salud mas cercano.
+        </p>
+
+        
+    </div>
+
+
+
+<% end %>
+  

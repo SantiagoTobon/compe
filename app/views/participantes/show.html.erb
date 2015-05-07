@@ -1,0 +1,55 @@
+<h1>Tu inscripcion ha sido exitosa</h1>
+<h2>Te esperamos este 07 de junio</h2>
+<p>
+  <strong>Cc:</strong>
+  <%= @participante.cc %>
+</p>
+
+<p>
+  <strong>Primer nombre:</strong>
+  <%= @participante.primer_Nombre %>
+</p>
+
+<p>
+  <strong>Segundo nombre:</strong>
+  <%= @participante.segundo_Nombre %>
+</p>
+
+<p>
+  <strong>Primer apellido:</strong>
+  <%= @participante.primer_Apellido %>
+</p>
+
+<p>
+  <strong>Segundo apellido:</strong>
+  <%= @participante.segundo_Apellido %>
+</p>
+
+<p>
+  <strong>Eps:</strong>
+  <%= @participante.eps %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @participante.ciudad %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @participante.telefono %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @participante.categoria %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @participante.edad %>
+</p>
+si la informacion es erronea puedes corregir<p>
+
+<%= link_to 'Editar', edit_participante_path(@participante) %> 
+
